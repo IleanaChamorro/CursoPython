@@ -9,10 +9,12 @@
      #   pass
 
 class Persona: 
-    def __init__(self, nombre, apellido, edad):
+    def __init__(self, nombre, apellido, edad, *valores, **terminos):
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad 
+        self.valores = valores
+        self.terminos = terminos
 
         #Otra manera
 
@@ -22,9 +24,9 @@ class Persona:
         #this.edad = edad
   #Metodos de Instancia
     def mostrar_detalles(self):
-      print(f'Persona: {self.nombre} ,{self.apellido}, {self.edad}')
+      print(f'Persona: {self.nombre} ,{self.apellido}, {self.edad}, {self.valores}, {self.terminos}') #Persona: Juan Carlos ,Juarez, 25, ('4446665', 2, 3, 5), {'m': 'manzana', 'p': 'pera'}
 
-persona1 = Persona('Juan', 'Perez', 28)
+persona1 = Persona('Juan', 'Perez', 28, '4446665', 2,3,5, m="manzana", p="pera")
 print(f'Objeto Persona1: {persona1.nombre}, {persona1.apellido}, {persona1.edad}')
 #Objeto Persona1: Juan, Perez, 28
 
