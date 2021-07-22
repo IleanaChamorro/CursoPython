@@ -9,13 +9,23 @@
      #   pass
 
 class Persona: 
-    def __init__(self):
-        self.nombre = 'Juan'
-        self.apellido = 'Perez'
-        self.edad = 28
+    def __init__(self, nombre, apellido, edad):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.edad = edad
 
-persona1 = Persona()
-print(persona1.nombre)
-print(persona1.apellido)
-print(persona1.edad)
-print(type(Persona))
+persona1 = Persona('Juan', 'Perez', 28)
+print(f'Objeto Persona1: {persona1.nombre}, {persona1.apellido}, {persona1.edad}')
+#Objeto Persona1: Juan, Perez, 28
+
+#Modificar Atributos
+persona1.nombre = 'Juan Carlos'
+persona1.apellido = 'Juarez'
+persona1.edad = 25 
+print(f'Objeto Persona1: {persona1.nombre}, {persona1.apellido}, {persona1.edad}')
+#Objeto Persona1: Juan Carlos, Juarez, 25
+
+#Creación de Objetos
+persona2 = Persona('Karla', 'Gomez', 30)
+print(f'Objeto Persona2: {persona2.nombre}, {persona2.apellido}, {persona1.edad}')
+#Objeto Persona2: Karla, Gomez, 30
