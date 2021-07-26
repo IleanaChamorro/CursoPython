@@ -3,8 +3,8 @@ class Persona:
     def __init__(self, nombre, apellido, edad):
         #Atributo encapsulado
         self._nombre = nombre
-        self.apellido = apellido
-        self.edad = edad
+        self._apellido = apellido
+        self._edad = edad
 
     #Decorador
     @property #puede ser usado para modificar un método para que sea un atributo o propiedad
@@ -16,11 +16,30 @@ class Persona:
     def nombre(self):
         self._nombre = nombre
 
+    @property
+    def apellido(self):
+        return self._apellido
+
+    @apellido.setter
+    def apellido(self, apellido):
+        self._apellido = apellido
+
+    @property
+    def edad(self):
+            return self._edad
+
+    @edad.setter
+    def edad(self, edad):
+        self._edad = edad 
     def mostrar_detalle(self):
-        print(f'Persona: {self._nombre} {self.apellido} {self.edad} ')
+        print(f'Persona: {self._nombre} {self._apellido} {self._edad} ')
 
 persona1 = Persona('Juan', 'Perez', 28)
 print(persona1.nombre) #Juan
 
 persona1._nombre = 'Juan Carlos'
 print(persona1.nombre)  #Juan Carlos
+
+persona1.apellido = 'Lara'
+persona1.edad = 30
+persona1.mostrar_detalle()#Persona: Juan Carlos Lara 30 
