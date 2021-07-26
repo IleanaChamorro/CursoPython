@@ -31,8 +31,13 @@ class Persona:
     @edad.setter
     def edad(self, edad):
         self._edad = edad 
+
     def mostrar_detalle(self):
         print(f'Persona: {self._nombre} {self._apellido} {self._edad} ')
+
+    #Metodo destructor
+    def __del__(self):
+        print(f'Persona: {self._nombre} {self._apellido}')
 
 #Solo si esta dentro de main ejecutar el siguiente codigo
 if __name__ == '__main__':
