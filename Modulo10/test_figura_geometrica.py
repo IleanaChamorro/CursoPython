@@ -1,5 +1,9 @@
 from Cuadrado import Cuadrado
-from Rectangulo import Rectangulo
+from FiguraGeometrica import FiguraGeometrica
+
+figura = FiguraGeometrica() #TypeError: Can't instantiate abstract class FiguraGeometrica with abstract method calcular_area
+
+
 cuadrado1 = Cuadrado(5, 'rojo')
 print(cuadrado1.ancho) #5
 print(cuadrado1.alto) #5
