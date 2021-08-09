@@ -1,6 +1,8 @@
 from Cuadrado import Cuadrado
 from FiguraGeometrica import FiguraGeometrica
 
+
+#No se puede instanciar una clase abstracta
 figura = FiguraGeometrica() #TypeError: Can't instantiate abstract class FiguraGeometrica with abstract method calcular_area
 
 
