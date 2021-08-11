@@ -15,3 +15,10 @@ miClase = miclase('Valor variable instancia')
 print(miClase.variables_instancia) #Valor variable instancia
 #Acceder a la variable de clase desde el objeto
 print(miClase.variables_clase) #Valor variable clase
+#Asociar una nueva variable de clase al momento
+miClase.variable_clase2 = 'Valor variable clase 2'
+#Acceder desde la misma clase
+print(MiClase.variable_clase2)
+#Acceder desde el objeto
+print(MiClase.variable_clase2)
+print(MiClase2.variable_clase2)
