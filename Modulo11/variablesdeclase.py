@@ -13,7 +13,14 @@ class miclase:
     def metodo_estatico():
         #Los metodos estaticos no pueden acceder a las variables de instancias 
         #self.variable_instancia
+        #Si puede acceder directamente a la variable de clase
         print(miclase.variables_clase)
+
+    #Metodo de Clase
+    @classmethod
+    def metodo_clase(cls):
+        #Acceder a variable de clase directamente
+        print(cls.variables_clase)
         
 
 print(miclase.variables_clase) #Valor variable clase
