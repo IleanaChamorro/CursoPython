@@ -8,6 +8,14 @@ class miclase:
         #Esta variable de instancia se asocia a cada uno de los objetos
         self.variables_instancia = variable_instancia
 
+    #Metodo Estático
+    @staticmethod
+    def metodo_estatico():
+        #Los metodos estaticos no pueden acceder a las variables de instancias 
+        #self.variable_instancia
+        print(miclase.variables_clase)
+        
+
 print(miclase.variables_clase) #Valor variable clase
 
 #Para acceder a la variable de instancia debe existir un objeto
