@@ -23,7 +23,7 @@ class Orden:
     def __str__(self):
         productos_str = ''
         for producto in self._productos:
-            productos_str += producto.__str__() * '|'
+            productos_str += producto.__str__() + '|'
 
         return f'Orden: {self._id_orden}, Productos: {productos_str}'
 
