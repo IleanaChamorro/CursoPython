@@ -1,3 +1,9 @@
+#Manejo de excepciones
+#Try => Este bloque probará que ocurra el error exceptuado
+#Except: Manejo del error en esta porcion del codigo
+#Else: Si no hay excepción, este bloque se ejecutará
+#Finally: El bloque siempre se ejecuta, ya sea que se genere una excepcion o no
+
 #10/0 
 #ZeroDivisionError: division by zero, error subclase 'Aritmetic Error'
 
@@ -31,6 +37,10 @@ except TypeError as e:
     print(f'Ocurrio un error: {e}, {type(e)}')
 except Exception as e:
     print(f'Ocurrio un error: {e}, {type(e)}')
-
+else:
+    print('No se arrojo ninguna excepcion')
+finally:
+    print('Ejecuccion del bloque finally')
+    
 print(f'Resultado: {resultado}')#TypeError: unsupported operand type(s) for /: 'str' and 'int'
 print('Continuamos...')#Continuamos...
